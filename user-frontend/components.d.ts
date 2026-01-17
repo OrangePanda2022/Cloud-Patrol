@@ -14,10 +14,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     FooterView: typeof import('./src/components/FooterView.vue')['default']
     HeaderView: typeof import('./src/components/HeaderView.vue')['default']
-    LoadingView: typeof import('./src/components/LoadingView.vue')['default']
     MapView: typeof import('./src/components/MapView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SnowView: typeof import('./src/components/SnowView.vue')['default']
   }
 }
 
@@ -25,8 +25,8 @@ declare module 'vue' {
 declare global {
   const FooterView: typeof import('./src/components/FooterView.vue')['default']
   const HeaderView: typeof import('./src/components/HeaderView.vue')['default']
-  const LoadingView: typeof import('./src/components/LoadingView.vue')['default']
   const MapView: typeof import('./src/components/MapView.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const SnowView: typeof import('./src/components/SnowView.vue')['default']
 }

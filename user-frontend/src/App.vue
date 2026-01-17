@@ -3,6 +3,7 @@
 <template>
   <HeaderView>
     <template #page-content>
+      <SnowView />
       <main>
         <RouterView />
       </main>

@@ -99,7 +99,9 @@ const startChat = () => {
 
   const q = encodeURIComponent(question.value)
 
-  eventSource = new EventSource(`http://localhost:2121/chat?question=${q}`)
+  const baseUrl = `${window.location.protocol}//${window.location.hostname}:2121`
+
+  eventSource = new EventSource(`${baseUrl}/chat?question=${q}`)
 
   eventSource.onmessage = (event) => {
     answer.value += event.data

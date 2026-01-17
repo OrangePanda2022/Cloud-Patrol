@@ -1,9 +1,11 @@
 <template>
-  <div class="min-h-screen bg-base-200">
+  <div class="min-h-screen bg-[url('@/assets/bg-tree-main.jpg')]">
     <!-- Main Content -->
-    <main class="max-w-5xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <main
+      class="w-full backdrop-blur-md bg-base-100/50 mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-6"
+    >
       <!-- Post Input -->
-      <section class="lg:col-span-1 card bg-base-100 shadow-xl">
+      <section class="lg:col-span-1 card shadow-xl bg-base-100 lg:mb-160">
         <div class="card-body">
           <h2 class="card-title">发布心情</h2>
           <textarea
@@ -23,7 +25,7 @@
         <div
           v-for="post in displayedPosts"
           :key="post.id"
-          class="card bg-base-100 shadow-md hover:shadow-xl transition"
+          class="card shadow-md hover:shadow-xl transition bg-base-100"
         >
           <div class="card-body">
             <div class="flex justify-between items-center">
@@ -48,8 +50,6 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted } from 'vue'
-
 const newPost = ref('')
 const pageSize = 2
 const page = ref(1)
